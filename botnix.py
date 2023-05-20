@@ -11,7 +11,7 @@ import os
 intents = nextcord.Intents.default()
 
 TOKEN = "YOUR_TOKEN"
-CHANNEL_ID = 1068901309148823683 #Replace with your channel ID
+TERMINAL_CHANNEL = 1068901309148823683 #Replace with your terminal channel ID
 LOG_CHANNEL = 1069237276112081017 #Replace with your log channel ID
 
 bot = commands.Bot(intents=intents)
@@ -92,7 +92,7 @@ async def commands_fr(interaction: Interaction):
 # mainfunction start here :
 @bot.event
 async def on_message(message):
-    if message.author != bot.user and message.channel.id == CHANNEL_ID:
+    if message.author != bot.user and message.channel.id == TERMINAL_CHANNEL:
         
         # Print general infos in terminal
         timeget()
